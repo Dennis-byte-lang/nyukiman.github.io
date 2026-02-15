@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" viewBox="0 0 560 360" fill="none">
+  <rect width="560" height="360" rx="18" fill="#F5F0FF"/>
+  <rect x="24" y="24" width="512" height="312" rx="16" fill="#FFFFFF"/>
+  <rect x="46" y="46" width="468" height="62" rx="10" fill="#2F2A68"/>
+  <rect x="62" y="66" width="180" height="14" rx="7" fill="#DCD9FF"/>
+  <rect x="46" y="124" width="146" height="190" rx="12" fill="#F8F6FF"/>
+  <rect x="208" y="124" width="146" height="190" rx="12" fill="#F8F6FF"/>
+  <rect x="370" y="124" width="144" height="190" rx="12" fill="#F8F6FF"/>
+  <rect x="62" y="144" width="114" height="76" rx="8" fill="#E7E0FF"/>
+  <rect x="224" y="144" width="114" height="76" rx="8" fill="#FFE7C7"/>
+  <rect x="384" y="144" width="114" height="76" rx="8" fill="#DDF5EE"/>
+  <rect x="62" y="232" width="80" height="12" rx="6" fill="#4A3DA6"/>
+  <rect x="62" y="252" width="102" height="10" rx="5" fill="#A9A0DA"/>
+  <rect x="224" y="232" width="80" height="12" rx="6" fill="#C07C22"/>
+  <rect x="224" y="252" width="102" height="10" rx="5" fill="#D8B38A"/>
+  <rect x="384" y="232" width="80" height="12" rx="6" fill="#198F6B"/>
+  <rect x="384" y="252" width="102" height="10" rx="5" fill="#8BC8B4"/>
+  <text x="40" y="326" fill="#2F2A68" font-family="Arial, sans-serif" font-size="18" font-weight="700">Seller Analytics Dashboard</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" viewBox="0 0 560 360" fill="none">
+  <rect width="560" height="360" rx="18" fill="#EAF3FF"/>
+  <rect x="24" y="24" width="512" height="312" rx="16" fill="#FFFFFF"/>
+  <path d="M64 270C126 196 186 182 248 196C310 210 368 262 432 250C458 245 482 230 504 206" stroke="#2C7BE5" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="98" cy="250" r="22" fill="#0B5D54"/>
+  <rect x="88" y="240" width="20" height="20" rx="4" fill="#FFFFFF"/>
+  <circle cx="246" cy="196" r="18" fill="#FFC857"/>
+  <circle cx="246" cy="196" r="7" fill="#FFFFFF"/>
+  <circle cx="432" cy="250" r="20" fill="#EF476F"/>
+  <circle cx="432" cy="250" r="8" fill="#FFFFFF"/>
+  <rect x="72" y="72" width="182" height="82" rx="10" fill="#F1F7FF"/>
+  <rect x="268" y="72" width="220" height="82" rx="10" fill="#E9F9F5"/>
+  <rect x="88" y="92" width="120" height="12" rx="6" fill="#2C7BE5"/>
+  <rect x="88" y="114" width="146" height="10" rx="5" fill="#9BB8E4"/>
+  <rect x="286" y="92" width="156" height="12" rx="6" fill="#0B5D54"/>
+  <rect x="286" y="114" width="180" height="10" rx="5" fill="#9DC8BE"/>
+  <text x="40" y="324" fill="#1D3A6D" font-family="Arial, sans-serif" font-size="18" font-weight="700">Live Delivery & Tracking</text>
+</svg>

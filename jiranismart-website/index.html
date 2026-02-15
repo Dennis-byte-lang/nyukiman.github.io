@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://images.unsplash.com https://*.openstreetmap.org; connect-src 'self' https: http: ws: wss:; frame-src 'self' https://www.openstreetmap.org; object-src 'none'; base-uri 'self'; form-action 'self';"
+    />
+    <title>JiraniSmart Web Console</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <template id="auth-template">
+      <main class="auth-shell">
+        <section class="auth-hero">
+          <div class="hero-head">
+            <span class="hero-badge">Hyperlocal Commerce Platform</span>
+            <button id="auth-trigger" class="auth-icon-btn" type="button" title="Open Login / Register">
+              <span aria-hidden="true">👤</span>
+              <span>Login</span>
+            </button>
+          </div>
+          <div class="hero-top">
+            <h1>JiraniSmart Marketplace</h1>
+            <p>Buy, sell, and deliver from one platform.</p>
+          </div>
+          <div class="hero-grid">
+            <article class="hero-card">
+              <h3>Marketplace</h3>
+              <p>Find products fast.</p>
+            </article>
+            <article class="hero-card">
+              <h3>Live Delivery</h3>
+              <p>Assign and track riders.</p>
+            </article>
+            <article class="hero-card">
+              <h3>Business Tools</h3>
+              <p>Manage stock and payments.</p>
+            </article>
+          </div>
+          <div class="hero-kpis">
+            <div>
+              <strong>24/7</strong>
+              <span>Support Availability</span>
+            </div>
+            <div>
+              <strong>5 Roles</strong>
+              <span>Connected in One System</span>
+            </div>
+            <div>
+              <strong>Real-Time</strong>
+              <span>Orders and Delivery Status</span>
+            </div>
+          </div>
+          <section class="showcase">
+            <h3>Platform Preview</h3>
+            <p>How JiraniSmart works.</p>
+            <div class="showcase-grid">
+              <figure class="showcase-item large">
+                <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80" alt="Marketplace sample" loading="lazy" />
+                <figcaption>Marketplace</figcaption>
+              </figure>
+              <figure class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=900&q=80" alt="Delivery sample" loading="lazy" />
+                <figcaption>Delivery</figcaption>
+              </figure>
+              <figure class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80" alt="Seller dashboard sample" loading="lazy" />
+                <figcaption>Seller tools</figcaption>
+              </figure>
+              <figure class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=900&q=80" alt="Marketplace storefront sample" loading="lazy" />
+                <figcaption>Storefront</figcaption>
+              </figure>
+              <figure class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1617226371868-89f6d4f0af4f?auto=format&fit=crop&w=900&q=80" alt="Dispatch operations sample" loading="lazy" />
+                <figcaption>Dispatch</figcaption>
+              </figure>
+              <figure class="showcase-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Business growth sample" loading="lazy" />
+                <figcaption>Analytics</figcaption>
+              </figure>
+            </div>
+          </section>
+          <div class="hero-actions">
+            <a class="whatsapp-btn" href="https://wa.me/254716135136" target="_blank" rel="noopener noreferrer">
+              WhatsApp Support
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <div id="auth-modal" class="auth-modal hidden">
+        <section class="auth-panel card">
+          <div class="auth-panel-head">
+            <h3>Account Access</h3>
+            <button id="auth-close" class="btn secondary" type="button">Close</button>
+          </div>
+          <div class="tabs">
+            <button type="button" data-tab="login" class="tab active">Login</button>
+            <button type="button" data-tab="register" class="tab">Register</button>
+            <button type="button" data-tab="reset" class="tab">Reset Password</button>
+          </div>
+
+          <form id="login-form" class="form active">
+            <div class="login-title-row">
+              <span class="agent-login-icon" id="login-role-icon" aria-hidden="true">👤</span>
+              <h2 id="login-role-title">Welcome Back</h2>
+            </div>
+            <p id="login-role-subtitle" class="form-subtitle">Sign in to continue to your workspace.</p>
+            <label>Phone <input name="phone" required placeholder="07xxxxxxxx" autocomplete="tel" /></label>
+            <label>Role
+              <select name="selectedRole" id="login-role-select" required>
+                <option>Buyer</option>
+                <option>Seller</option>
+                <option>Biker</option>
+                <option>Bodaboda</option>
+                <option>Agent</option>
+                <option>Mechanic</option>
+                <option>Road assistant</option>
+              </select>
+            </label>
+            <div id="agent-login-brief" class="agent-login-brief hidden">
+              Agent access grants regional oversight tools, seller controls, and compliance actions.
+            </div>
+            <div id="agent-login-meta" class="agent-login-meta hidden">
+              <span>Encrypted Session</span>
+              <span>Audit Logging Enabled</span>
+              <span>RBAC Protected</span>
+            </div>
+            <label>Password <input type="password" name="password" required autocomplete="current-password" /></label>
+            <button type="submit" class="btn primary">Login</button>
+          </form>
+
+          <form id="register-form" class="form">
+            <h2>Create Account</h2>
+            <label>Name / Shop Name <input name="name" required /></label>
+            <label>Phone <input name="phone" required placeholder="07xxxxxxxx" autocomplete="tel" /></label>
+            <label>Role
+              <select name="role" id="register-role-select" required>
+                <option>Buyer</option>
+                <option>Seller</option>
+                <option>Biker</option>
+                <option>Agent</option>
+                <option>Mechanic</option>
+              </select>
+            </label>
+            <div id="seller-category-wrap" class="hidden">
+              <label>Business Category
+                <select id="register-business-category" name="businessCategory">
+                  <option>Grocery</option>
+                  <option>Pharmacy</option>
+                  <option>Restaurant</option>
+                  <option>Fast Food</option>
+                  <option>Bakery</option>
+                  <option>Butchery</option>
+                  <option>Electronics</option>
+                  <option>Fashion</option>
+                  <option>Hardware</option>
+                  <option>Water</option>
+                  <option>Gas</option>
+                  <option>Stationery</option>
+                  <option>Salon</option>
+                  <option>Agrovet</option>
+                  <option>General</option>
+                </select>
+              </label>
+            </div>
+            <div id="role-detail-wrap" class="hidden">
+              <label id="register-detail-label">Vehicle / Operation Detail
+                <input id="register-extra-detail" name="extraDetail" placeholder="Motorbike / Field Agent / Mechanic" />
+              </label>
+            </div>
+            <label>Password <input type="password" name="password" required autocomplete="new-password" /></label>
+            <label>Confirm Password <input type="password" name="confirmPassword" required autocomplete="new-password" /></label>
+            <button type="submit" class="btn primary">Register</button>
+          </form>
+
+          <form id="reset-form" class="form">
+            <h2>Reset Password</h2>
+            <p class="form-subtitle">Securely recover your account in two steps.</p>
+            <div class="reset-card">
+              <h4>Step 1: Verify Phone</h4>
+              <label>Phone Number <input name="phone" required placeholder="07xxxxxxxx" autocomplete="tel" /></label>
+              <button type="button" id="send-code-btn" class="btn secondary">Send Verification Code</button>
+            </div>
+            <div class="reset-card">
+              <h4>Step 2: Create New Password</h4>
+              <label>Verification Code <input name="code" required placeholder="6-digit code" /></label>
+              <label>New Password <input type="password" name="newPassword" required placeholder="At least 6 characters" autocomplete="new-password" /></label>
+              <label>Confirm New Password <input type="password" name="confirmNewPassword" required autocomplete="new-password" /></label>
+              <button type="submit" class="btn primary">Reset Password</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </template>
+
+    <template id="dashboard-template">
+      <main class="shell">
+        <aside class="sidebar card">
+          <div>
+            <h2>JiraniSmart</h2>
+            <p id="session-role"></p>
+          </div>
+          <div class="menu" id="dashboard-menu"></div>
+        </aside>
+
+        <section class="content">
+          <header class="topbar card">
+            <div>
+              <h1 id="dashboard-title"></h1>
+              <p id="welcome-line"></p>
+            </div>
+            <button id="diag-toggle" class="btn secondary">Connection Diagnostics</button>
+          </header>
+
+          <section id="diagnostics" class="card diagnostics hidden"></section>
+          <section id="dashboard-content"></section>
+          <footer class="page-footer-actions card">
+            <a class="whatsapp-btn" href="https://wa.me/254716135136" target="_blank" rel="noopener noreferrer">
+              Customer Service
+            </a>
+            <button id="logout-btn" class="btn danger">Logout</button>
+          </footer>
+        </section>
+      </main>
+    </template>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

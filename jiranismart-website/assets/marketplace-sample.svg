@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" viewBox="0 0 560 360" fill="none">
+  <rect width="560" height="360" rx="18" fill="#E7F6F2"/>
+  <rect x="28" y="28" width="504" height="58" rx="12" fill="#0B5D54"/>
+  <circle cx="58" cy="57" r="14" fill="#FFC857"/>
+  <rect x="84" y="48" width="156" height="18" rx="9" fill="#D9F3EC"/>
+  <rect x="28" y="106" width="160" height="226" rx="14" fill="#FFFFFF"/>
+  <rect x="204" y="106" width="160" height="226" rx="14" fill="#FFFFFF"/>
+  <rect x="380" y="106" width="152" height="226" rx="14" fill="#FFFFFF"/>
+  <rect x="40" y="122" width="136" height="82" rx="10" fill="#D7EFE8"/>
+  <rect x="216" y="122" width="136" height="82" rx="10" fill="#E9F4FF"/>
+  <rect x="392" y="122" width="128" height="82" rx="10" fill="#FFF1D9"/>
+  <rect x="40" y="216" width="92" height="12" rx="6" fill="#1A7468"/>
+  <rect x="40" y="236" width="124" height="10" rx="5" fill="#9AB8B1"/>
+  <rect x="216" y="216" width="92" height="12" rx="6" fill="#1A7468"/>
+  <rect x="216" y="236" width="124" height="10" rx="5" fill="#9AB8B1"/>
+  <rect x="392" y="216" width="92" height="12" rx="6" fill="#1A7468"/>
+  <rect x="392" y="236" width="124" height="10" rx="5" fill="#9AB8B1"/>
+  <text x="32" y="344" fill="#0B5D54" font-family="Arial, sans-serif" font-size="18" font-weight="700">Marketplace Preview</text>
+</svg>
